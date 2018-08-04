@@ -1,0 +1,92 @@
+<?xml version="1.0" ?>
+
+<sdf version="1.6">
+	<model name="SAMFC 2018">
+	<pose>0 0 0 0 0 0</pose>
+		<static>false</static>
+		<model name="floor">
+			<pose>0 0 0 0 0 0</pose>
+			<static>true</static>
+			<link name="floor">
+				<gravity>false</gravity>
+				<pose>0 0 0 0 0 0</pose>
+				<visual name="visual">
+					<geometry>
+						<plane>
+							<normal>0 1 0</normal>
+							<size>100 100</size>
+						</plane>
+					</geometry>
+					<material>
+						<ambient>1 1 1 1</ambient>
+						<diffuse>1 1 1 1</diffuse>
+					</material>
+				</visual>
+				<collision name="collision">
+					<geometry>
+						<plane>
+							<normal>0 1 0</normal>
+							<size>100 100</size>
+						</plane>
+					</geometry>
+				</collision>
+			</link>
+		</model>
+		<model name="Landing Pads">
+			<pose>0 0.01 0 0 0 0</pose>
+			<static>false</static>
+			<link name="FOB">
+				<gravity>false<gravity>
+				<pose>1.000 0 18.000 0 0 0</pose>
+				<visual name="visual">
+					<geometry>
+						<image>
+							<uri>/LandingPad.png</uri>
+							<height>0.001</height>
+						</image>
+					</geometry>
+				</visual>
+			</link>
+			<link name="HQ">
+				<gravity>false<gravity>
+				<pose>0 0 0 0 0 0</pose>
+				<visual name="visual">
+					<geometry>
+						<image>
+							<uri>/LandingPad.png</uri>
+							<height>0.001</height>
+						</image>
+					</geometry>
+				</visual>
+			</link>
+		</model>
+		<model name="Highway Sector">
+			<pose>0 0 0 0 0 0</pose>
+			<static>true</static>
+			<link name="Highway Line">
+				<gravity>false</gravity>
+				<pose>0 0 0 0 0 0</pose>
+				<visual name="visual">
+					<geometry>
+						<image>
+							<uri>/highway.png</uri>
+							<height>0.001</height>
+						</image>
+					</geometry>
+				</visual>
+			</link>
+			<link name="Cross">
+			<gravity>false</gravity>
+				<pose>1.500 0 8.000 0 0 0</pose>
+				<visual name="visual">
+					<geometry>
+						<image>
+							<uri>/cross.png</uri>
+							<height>0.001</height>
+						</image>
+					</geometry>
+				</visual>
+			</link>
+		</model>
+	</model>
+</sdf>
